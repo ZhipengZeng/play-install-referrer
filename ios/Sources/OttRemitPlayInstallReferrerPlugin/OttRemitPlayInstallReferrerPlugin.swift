@@ -10,14 +10,8 @@ public class OttRemitPlayInstallReferrerPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "OttRemitPlayInstallReferrerPlugin"
     public let jsName = "OttRemitPlayInstallReferrer"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
     ]
-    private let implementation = OttRemitPlayInstallReferrer()
-
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc override func methodThatRequiresAndroid(_ call: CAPPluginCall) {
+        call.unimplemented("Not implemented on iOS.")
     }
 }

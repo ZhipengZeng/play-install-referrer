@@ -1,3 +1,3 @@
 export interface OttRemitPlayInstallReferrerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getReferrerDetails(): Promise<{ referrerUrl: string, appVersion: string, referrerClickTime: string, appInstallTime: string, instantExperienceLaunched: boolean }>;
 }
