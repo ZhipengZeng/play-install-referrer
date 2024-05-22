@@ -1,6 +1,6 @@
 {
   "name": "capacitor-play-install-referrer-library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "supports Capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
